@@ -4,6 +4,10 @@ title: وبلاگ شخصی علی سبزواری
 ---
 {% include JB/setup %}
 
+  {% for post in site.posts %}
+	<div>{{ post.content }}</div>
+  {% endfor %}
+
 
 <ul class="posts">
   {% for post in site.posts %}
