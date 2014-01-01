@@ -1,4 +1,4 @@
-# This is the default format. 
+﻿# This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
 
@@ -8,10 +8,10 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Ali Sabzevari
+title : علی سبزواری
 tagline: Site Tagline
 author :
-  name : Ali Sabzevari
+  name : علی سبزواری
   email : alisabzevari@gmail.com
   github : alisabzevari
   twitter : username
