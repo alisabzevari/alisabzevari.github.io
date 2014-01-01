@@ -45,14 +45,12 @@
             </div>
             <nav class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-					<li><a href="#">درباره</a></li>
+					<li><a href="/about.html">درباره</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <div>
-
         <div class="content">
             {{ content }}
         </div>
@@ -76,5 +74,7 @@
     </div>
 
     {% include JB/analytics %}
+	<script src="{{ ASSET_PATH }}/bootstrap/js/.js"></script>
+	<script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
