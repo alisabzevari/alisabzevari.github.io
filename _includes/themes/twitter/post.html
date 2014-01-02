@@ -5,8 +5,8 @@
                 <span>{{ page.date | date_to_long_string }}</span>
             </div>
 			<h1 class="entry-title">
-				{% if title %}
-				<a href="{{ BASE_PATH }}{{ url }}">{{ title }}</a>
+				{% if page.title %}
+				<a href="{{ BASE_PATH }}{{ page.url }}">{{ page.title }}</a>
 				{% endif %}
 			</h1>
 
