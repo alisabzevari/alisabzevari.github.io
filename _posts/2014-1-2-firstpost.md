@@ -1,7 +1,7 @@
 ---
 layout: post
-category : General
-tags : [General]
+category : general
+tags : [general]
 title: پست اول
 ---
 {% include JB/setup %}
