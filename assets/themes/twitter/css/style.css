@@ -65,3 +65,8 @@
  .code  {
 	direction: ltr;
   }
+  
+  .site-footer{
+	text-align: center;
+	font-size: 10px;
+  }
