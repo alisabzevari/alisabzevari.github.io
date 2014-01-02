@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 category : general
 tags : [general]
