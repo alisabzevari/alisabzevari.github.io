@@ -7,20 +7,20 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            'Ali Sabzevari'
-tagline:          'Ali Sabzevari's Personal Blog'
-description:      'Ali Sabzevari's personal blog about technology and the other things!'
-url:              http://alisabzevari.github.io
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
 baseurl:          /
 
 author:
-  name:           'Ali Sabzevari'
-#  url:            https://twitter.com/mdo
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
 
 paginate:         5
 
 # Custom vars
 version:          2.1.0
 
-#github:
-#  repo:           https://github.com/poole/hyde
+github:
+  repo:           https://github.com/poole/hyde
