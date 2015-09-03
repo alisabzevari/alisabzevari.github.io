@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Ali Sabzevari
 tagline:          'Personal Blog'
-description:      'Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      'Technology and the other things'
 url:              http://hyde.getpoole.com
 baseurl:          /
 
