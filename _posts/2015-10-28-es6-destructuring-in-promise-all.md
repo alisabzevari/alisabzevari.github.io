@@ -7,7 +7,6 @@ There were times when I refused to use `$q.all` in angularjs because
 processing the result of promises in an array is suffering.
 
 {% highlight js %}
-```
 let promises = [p1(), p2(), p3()];
 $q.all(promises)
   .then(function (result) {
@@ -16,7 +15,6 @@ $q.all(promises)
 	  let p3Result = result[2];
 	  // ...
   });
-```
 {% endhighlight %}
 
 Using array to get the result of 3 promises that have names is a little
@@ -30,13 +28,11 @@ other use cases you can read
 about it. Using destructuring, the above code will be:
 
 {% highlight js %}
-```
 var promises = [p1(), p2(), p3()];
 $q.all(promises)
   .then(function ([p1Result, p2Result, p3Result]) {
 	  // ...
   });
-```
 {% endhighlight %}
 
 As you can see, the result is more concise and readable. ES6 (ES2015)
