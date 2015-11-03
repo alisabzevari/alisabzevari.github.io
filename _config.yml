@@ -9,7 +9,7 @@ relative_permalinks: true
 # Setup
 title:            Ali Sabzevari
 tagline:          'Personal Blog'
-description:      'Technology and the other things'
+description:      'Technology and some other things'
 url:              http://hyde.getpoole.com
 baseurl:          /
 
