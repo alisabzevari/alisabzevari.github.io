@@ -67,7 +67,7 @@ different in different implementations [[*]](https://developer.mozilla.org/en-US
 **Note 2:** Double bitwise not (~~) can also convert string to its
 representing number, but it could result strange for large numbers.
 Actually, it will convert the string to 32bit integers and if the 
-integer can not be represented in 32bits, it will wrap.
+integer can not be represented in 32bits, it will wrap [[*]](http://stackoverflow.com/a/20513389/692422).
 
 ## References
 * Stackoverflow - [[1]](http://stackoverflow.com/questions/1133770/how-do-i-convert-a-string-into-an-integer-in-javascript),
