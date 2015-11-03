@@ -30,6 +30,7 @@ Here are some examples tested in chrome:
 +"-1" // -1
 +"1.1" // 1.1
 +"0xF" // 15
++"1 " // 1
 
 +"false" // NaN
 +"true" // NaN
@@ -75,4 +76,3 @@ integer can not be represented in 32bits, it will wrap.
 [[2]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
 [[3]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 [[4]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)
-
