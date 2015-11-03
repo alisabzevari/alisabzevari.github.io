@@ -3,9 +3,9 @@ layout: post
 title: The ultimate guide of converting strings to numbers in javascript
 ---
 *In every programming language there are some tips which doesn't seem 
-important but being expert in that language undoubtedly 
+important. But being expert in that language undoubtedly 
 related to knowing these small gotchas. I am going to learn and 
-document them and thereupon share here.*
+document them in javascript language and thereupon share here.*
 
 The first time that converting strings to numbers in javascript
  catched my eye was when I noticed using a + before a variable.
