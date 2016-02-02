@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My problems with AngularJS and what I think about next the generation web frameworks
+title: My problems with AngularJS and what I think about the next generation web frameworks
 ---
 
 Other programmers on the other side of the world probably made a new Javascript framework when you were sleeping last night. We obviously know that separating from the framework we are using currently is not easy for us (Although learning new things is the joy of programming). Moreover it can turn into a nightmare when you think about the codes you wrote with that old framework and planning to migrate them to a new framework. I have those feelings about AngularJS.
