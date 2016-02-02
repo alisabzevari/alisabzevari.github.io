@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why web components - Part 0
+title: My problems with AngularJS and what I think about next the generation web frameworks
 ---
 
 Other programmers on the other side of the world probably made a new Javascript framework when you were sleeping last night. We obviously know that separating from the framework we are using currently is not easy for us (Although learning new things is the joy of programming). Moreover it can turn into a nightmare when you think about the codes you wrote with that old framework and planning to migrate them to a new framework. I have those feelings about AngularJS.
@@ -19,11 +19,14 @@ This is the beginning of a series of thinking sessions which supposed to lead us
 6. Having 2 way data binding in angular achieved with the cost of performance and adding strange phases and cycles in angular. Angular 2 and Aurelia followed different approaches to tackle these problems. 
 7. When it comes to directives you need to understand almost all of the angular internals to be able to write a good directive. In my opinion, [web components][webcomponents] is the answer to long lasting problem of components in html.
 8. Although angular is a very productive framework but its size and the problem of lazy loading in its modules made it unusable in small applications and applications which make use of too many 3rd party libraries. [RiotJS][3] in size beats all of the other libraries.
+I try to find a framework or a set of libraries to gather a suite of tools that don't have these issues.
 
 ## Angular and react showed the vision
 In my opinion, the most important factor of Angular's popularity is directives. Directives made new expectations from HTML views. It made the MVC pattern more powerful by bringing the components on the table. People start to think of HTML as an structure which describes the relation between different components and a way to configure them. Elements are components. Sibling elements of a component are a way to modify a component's contents. Attributes are a way to configure components or talk with them. Another brilliant idea is that directives can be applied to attributes and classes to add generalized behavior to other components. For example, adding a tooltip to an element.
 
-On the other hand, the brilliance of react was that it is not a framework. React didn't have assumptions about how do you implement other concerns like dependency injection, http services, business logic layer, routing etc. React is just a way to create components.
+On the other hand, the brilliance of react is that it is not a framework. React didn't have assumptions about how do you implement other concerns like dependency injection, http services, business logic layer, routing etc. React is just a way to create components and creating components was always an important issue in web development.
+
+In conclusion, my personal thinking is that we need to establish a standard for creating components in web and easily wrap components created with other frameworks and libraries like JQuery UI or Kendo UI. I don't think if react could be a good answer because it is not going to be a native API in web and it is not easy to integrate its components with other frameworks. But I think Web Components has a proper road map to fix this issue.
 
  [1]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template
  [2]: https://oclazyload.readme.io/
@@ -32,7 +35,3 @@ On the other hand, the brilliance of react was that it is not a framework. React
  [jspm]: http://jspm.io/
  [webpack]: https://webpack.github.io/
  [webcomponents]: http://webcomponents.org/
-
-## To Read!
-http://www.dotnetcurry.com/angularjs/1214/angular2-developer-preview-new-features
-
