@@ -7,4 +7,4 @@ AngularJS has done a good job in form related scenarios. One of the best parts i
 
 {% gist 3703cca04d8aa6af559c angular-form-level-validation.js %}
 
-The directive is very simple. It reads an object that its keys are validator names and its values are functions which should return boolean after doing validation. [This fiddle](https://jsfiddle.net/alisabzevari/q2ye6zyf/9/) is a sample for that directive.
+The directive is very simple. It reads an object that its keys are validator names and its values are functions which should return boolean after doing validation. [This fiddle](https://jsfiddle.net/alisabzevari/q2ye6zyf/) is a sample for that directive.
