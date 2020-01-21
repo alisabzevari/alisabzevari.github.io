@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I think package manager is one of the most useful tools in programming. In the web ecosystem library developers try to sell their libraries or frameworks by file size. I think this is the consequence">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why not a package manager for browsers">
+<meta property="og:url" content="http:&#x2F;&#x2F;alisabzevari.github.io&#x2F;2016&#x2F;04&#x2F;11&#x2F;2016-04-11-why-not-browser-package-managers&#x2F;index.html">
+<meta property="og:site_name" content="Ali Sabzevari">
+<meta property="og:description" content="I think package manager is one of the most useful tools in programming. In the web ecosystem library developers try to sell their libraries or frameworks by file size. I think this is the consequence">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-31T20:51:27.743Z">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Why not a package manager for browsers</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/09/30/2017-10-3-you-might-not-need-state-management/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/02/08/2016-02-08-angular-form-level-validation/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&text=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&is_video=false&description=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Why not a package manager for browsers&body=Check out this article: http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&name=Why not a package manager for browsers&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dreaming-of-the-api"><span class="toc-number">1.</span> <span class="toc-text">Dreaming of the api</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problems"><span class="toc-number">2.</span> <span class="toc-text">Problems</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Why not a package manager for browsers
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Ali Sabzevari</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-04-10T22:00:00.000Z" itemprop="datePublished">2016-04-11</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/javascript/" rel="tag">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I think package manager is one of the most useful tools in programming. In the web ecosystem library developers try to sell their libraries or frameworks by file size. I think this is the consequence of the existence of a problem in web environment so you have to download all of the code to run in a web page. There is no shared libraries to use except for the browser native api.<br>Think of the situation in which a web application could use a polyfill that is downloaded before and is reusable as a shared library in that web application. Or your web application could expect popular libraries like React or Angular to be preinstalled on the browser.</p>
+<h2 id="Dreaming-of-the-api"><a href="#Dreaming-of-the-api" class="headerlink" title="Dreaming of the api"></a>Dreaming of the api</h2><p>I think the javascript module system could handle the needed api to some extents:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"angular"</span>);</span><br><span class="line"><span class="keyword">var</span> _ = <span class="built_in">require</span>(<span class="string">"underscore"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>And when needed, we can explicitly mention the version. Just like the npm conventions. For example:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"angular@1.3"</span>);</span><br><span class="line"><span class="keyword">var</span> _ = <span class="built_in">require</span>(<span class="string">"underscore@'&gt;=0.1.0 &lt;0.2.0'"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>The browser should look for the package in its cache. If the package exists in the cache, load it into the window and if it does not exist, download it from the repository and save to cache then load it.</p>
+<p>Another way of handling can be adding something to the <code>head</code> tag of the page to tell the browser to install the needed libraries. This can be something like the dependencies part of the <code>package.json</code> in npm.</p>
+<h2 id="Problems"><a href="#Problems" class="headerlink" title="Problems"></a>Problems</h2><ol>
+<li><strong>Backward Compatibility</strong>: The api must be backward compatible because some websites could change libraries or use other libraries with known names. So the <code>require</code> itself is not enough. We should build another api or extend the <code>require</code> to support using shared libraries and leave the old <code>require</code> api as is.</li>
+<li><strong>Security</strong>: The most important problem with this approach is security problems. If the shared library be a thief, then this will cause a disaster! But in my opinion this can be solved by building trusted repositories and put only trustworthy libraries into it. This is the primary approach of markets like app store, google play store and repositories like apt.</li>
+</ol>
+<p>So, why not a package manager like apt for browsers?!  </p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dreaming-of-the-api"><span class="toc-number">1.</span> <span class="toc-text">Dreaming of the api</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Problems"><span class="toc-number">2.</span> <span class="toc-text">Problems</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&text=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&is_video=false&description=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Why not a package manager for browsers&body=Check out this article: http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&title=Why not a package manager for browsers" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://alisabzevari.github.io/2016/04/11/2016-04-11-why-not-browser-package-managers/&name=Why not a package manager for browsers&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Ali Sabzevari
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-107280259-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'alisabzevari';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+

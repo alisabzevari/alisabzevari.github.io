@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Other programmers on the other side of the world probably made a new Javascript framework when you were sleeping last night. We obviously know that separating from the framework we are using currently">
+<meta name="keywords" content="javascript,angular,react,aurelia">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My problems with AngularJS and what I think about the next generation web frameworks">
+<meta property="og:url" content="http:&#x2F;&#x2F;alisabzevari.github.io&#x2F;2016&#x2F;02&#x2F;02&#x2F;2016-02-02-AngularJS-next-frameworks&#x2F;index.html">
+<meta property="og:site_name" content="Ali Sabzevari">
+<meta property="og:description" content="Other programmers on the other side of the world probably made a new Javascript framework when you were sleeping last night. We obviously know that separating from the framework we are using currently">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-31T20:51:27.743Z">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>My problems with AngularJS and what I think about the next generation web frameworks</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/02/08/2016-02-08-angular-form-level-validation/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/03/2015-11-03-javascript-convert-to-number/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&text=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&is_video=false&description=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My problems with AngularJS and what I think about the next generation web frameworks&body=Check out this article: http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&name=My problems with AngularJS and what I think about the next generation web frameworks&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Curse-of-AngularJS"><span class="toc-number">1.</span> <span class="toc-text">The Curse of AngularJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dreaming-of-an-ideal-framework"><span class="toc-number">2.</span> <span class="toc-text">Dreaming of an ideal framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular-and-react-showed-the-vision"><span class="toc-number">3.</span> <span class="toc-text">Angular and react showed the vision</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        My problems with AngularJS and what I think about the next generation web frameworks
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Ali Sabzevari</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-02-01T23:00:00.000Z" itemprop="datePublished">2016-02-02</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/angular/" rel="tag">angular</a>, <a class="tag-link" href="/tags/aurelia/" rel="tag">aurelia</a>, <a class="tag-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link" href="/tags/react/" rel="tag">react</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Other programmers on the other side of the world probably made a new Javascript framework when you were sleeping last night. We obviously know that separating from the framework we are using currently is not easy for us (Although learning new things is the joy of programming). Moreover it can turn into a nightmare when you think about the codes you wrote with that old framework and planning to migrate them to a new framework. I have those feelings about AngularJS.</p>
+<h2 id="The-Curse-of-AngularJS"><a href="#The-Curse-of-AngularJS" class="headerlink" title="The Curse of AngularJS"></a>The Curse of AngularJS</h2><p>When I started working with AngularJS, I felt it is the solution of the long lasting problem of creating web applications, which was struggling with DOM with an unstructured language. Besides other angular problems, it has a wonderful talent of putting your code into its trap (I am talking about <code>$http</code> and <code>$scope</code> and other angular specific concepts). And after more than 3 years of building real world applications with this framework, once you start to celebrate the success of your project, programmers who you read their blogs every day start to insult you with these words: performance, isolated scope, <code>$digest</code>, <code>$interpolate</code> etc.</p>
+<h2 id="Dreaming-of-an-ideal-framework"><a href="#Dreaming-of-an-ideal-framework" class="headerlink" title="Dreaming of an ideal framework"></a>Dreaming of an ideal framework</h2><p>This is the beginning of a series of thinking sessions which supposed to lead us to find what an ideal framework should be. These critics about angularjs can lead us to some of the characteristics that an ideal framework should have:</p>
+<ol>
+<li>There is no way to write an <code>ng-repeat</code> on multiple elements. Although they introduced <code>ng-repeat-start</code> and <code>ng-repeat-end</code> but these directives are not what I was thinking it should be. I wanted a dummy element which I could write <code>ng-repeat</code> on it. <a href="http://aurelia.io" target="_blank" rel="noopener">Aurelia</a> uses html’s [<code>template</code>] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template" target="_blank" rel="noopener">1</a> element and it works well.</li>
+<li>The DSL introduced for view templates in angular is a bit awkward. For instance, I always need to look at examples and documentations of <code>ng-options</code> to write the correct syntax of it. Aurelia has a better approach in some parts. For example, it uses ES6 string interpolation syntax instead of double curly braces. But react’s solution beats all of the other templating languages because it is not using any templating language at all. JSX, I believe, is the best alternative to other templating languages. Think of writing an <code>ng-repeat</code> with a simple JavaScript <code>for</code> which is obviously more powerful! </li>
+<li>There is a concept in angular called <em>module</em>, but I doesn’t help you to build a modular web application! In my opinion, modules in a web application must have the ability to be lazy loaded. But there aren’t any plans to load modules lazily in angular. Although <a href="https://oclazyload.readme.io/" target="_blank" rel="noopener">ocLazyLoad</a> tries to solve this problem but in cost of hacking angular. Fortunately, ES6’s universal module definition tied all of the inventions in this area together. Using tools like <a href="http://jspm.io/" target="_blank" rel="noopener">jspm</a> or <a href="https://webpack.github.io/" target="_blank" rel="noopener">webpack</a>, one can bundle related parts of an application together and create multiple lazy loadable modules. You can see benefits of this new language feature in the upcoming frameworks such as Aurelia and Angular 2 and even in react.</li>
+<li>Angular was one of the first libraries which payed much attention to dependency injection but the implementation was very primitive and tricky. Although I can not blame angular for that because of the language weaknesses. Thinking in OOP paradigm, the best way to inject dependencies is through a class’s constructor. Additionally, it is very important to decouple your business logic layer from framework. having <code>$inject</code> in all of the business layer objects or using <code>$scope.$apply</code> couples them more to angular. Decorators in ES2015 will help us to implement good IOC containers in JavaScript way while not cluttering the code or make it dependent to a specific framework. </li>
+<li>Angular has a zone which entering to it needs you to run <code>$scope.$apply</code>. It is the source of many misunderstandings and bugs when integrating a 3rd party library to angular.</li>
+<li>Having 2 way data binding in angular achieved with the cost of performance and adding strange phases and cycles in angular. Angular 2 and Aurelia followed different approaches to tackle these problems. </li>
+<li>When it comes to directives you need to understand almost all of the angular internals to be able to write a good directive. In my opinion, <a href="http://webcomponents.org/" target="_blank" rel="noopener">web components</a> is the answer to long lasting problem of components in html.</li>
+<li>Although angular is a very productive framework but its size and the problem of lazy loading in its modules made it unusable in small applications and applications which make use of too many 3rd party libraries. <a href="http://riotjs.com/" target="_blank" rel="noopener">RiotJS</a> in size beats all of the other libraries.<br>I try to find a framework or a set of libraries to gather a suite of tools that don’t have these issues.</li>
+</ol>
+<h2 id="Angular-and-react-showed-the-vision"><a href="#Angular-and-react-showed-the-vision" class="headerlink" title="Angular and react showed the vision"></a>Angular and react showed the vision</h2><p>In my opinion, the most important factor of Angular’s popularity is directives. Directives made new expectations from HTML views. It made the MVC pattern more powerful by bringing the components on the table. People start to think of HTML as an structure which describes the relation between different components and a way to configure them. Elements are components. Sibling elements of a component are a way to modify a component’s contents. Attributes are a way to configure components or talk with them. Another brilliant idea is that directives can be applied to attributes and classes to add generalized behavior to other components. For example, adding a tooltip to an element.</p>
+<p>On the other hand, the brilliance of react is that it is not a framework. React didn’t have assumptions about how do you implement other concerns like dependency injection, http services, business logic layer, routing etc. React is just a way to create components and creating components was always an important issue in web development.</p>
+<p>In conclusion, my personal thinking is that we need to establish a standard for creating components in web and easily wrap components created with other frameworks and libraries like JQuery UI or Kendo UI. I don’t think if react could be a good answer because it is not going to be a native API in web and it is not easy to integrate its components with other frameworks. But I think Web Components has a proper road map to fix this issue.</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Curse-of-AngularJS"><span class="toc-number">1.</span> <span class="toc-text">The Curse of AngularJS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dreaming-of-an-ideal-framework"><span class="toc-number">2.</span> <span class="toc-text">Dreaming of an ideal framework</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular-and-react-showed-the-vision"><span class="toc-number">3.</span> <span class="toc-text">Angular and react showed the vision</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&text=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&is_video=false&description=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My problems with AngularJS and what I think about the next generation web frameworks&body=Check out this article: http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&title=My problems with AngularJS and what I think about the next generation web frameworks" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://alisabzevari.github.io/2016/02/02/2016-02-02-AngularJS-next-frameworks/&name=My problems with AngularJS and what I think about the next generation web frameworks&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Ali Sabzevari
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-107280259-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'alisabzevari';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
