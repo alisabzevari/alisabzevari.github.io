@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="This is a repost of my answer to a question in Ask Ubuntu. I post it here for documentation reasons because it is removed from Ask Ubuntu by moderators.  The ProblemI bought a pair of Samsung Galaxy">
+<meta name="keywords" content="ubuntu,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu">
+<meta property="og:url" content="http:&#x2F;&#x2F;alisabzevari.github.io&#x2F;2020&#x2F;05&#x2F;17&#x2F;2020-05-17-galaxy-earbuds-ubuntu&#x2F;index.html">
+<meta property="og:site_name" content="Ali Sabzevari">
+<meta property="og:description" content="This is a repost of my answer to a question in Ask Ubuntu. I post it here for documentation reasons because it is removed from Ask Ubuntu by moderators.  The ProblemI bought a pair of Samsung Galaxy">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-05-17T18:37:20.900Z">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2020/01/21/2020-01-21-typescript-opaque-types/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/" target="_blank" rel="noopener"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&text=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&is_video=false&description=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu&body=Check out this article: http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&name=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Problem"><span class="toc-number">1.</span> <span class="toc-text">The Problem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Background"><span class="toc-number">2.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution-AskUbuntu-Answer"><span class="toc-number">3.</span> <span class="toc-text">Solution (AskUbuntu Answer)</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Ali Sabzevari</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2020-05-16T22:00:00.000Z" itemprop="datePublished">2020-05-17</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/" rel="tag">linux</a>, <a class="tag-link" href="/tags/ubuntu/" rel="tag">ubuntu</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>This is a repost of my answer to a question in <a href="https://askubuntu.com/questions/831331/failed-to-change-profile-to-headset-head-unit" target="_blank" rel="noopener">Ask Ubuntu</a>. I post it here for documentation reasons because it is removed from Ask Ubuntu by moderators.</p>
+</blockquote>
+<h1 id="The-Problem"><a href="#The-Problem" class="headerlink" title="The Problem"></a>The Problem</h1><p>I bought a pair of <a href="https://www.samsung.com/us/mobile/audio/galaxy-buds-plus/" target="_blank" rel="noopener">Samsung Galaxy Earbuds+</a> true wireless headphones to use them while working from home. Unfortunately, I couldn’t use their microphone on Ubuntu simply because the microphone did not appear in sounds settings.</p>
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>After some investigation, it turned out that there are lots of bluetooth communication standards known as <a href="https://en.wikipedia.org/wiki/List_of_Bluetooth_profiles" target="_blank" rel="noopener">bluetooth profiles</a>. In order to use a bluetooth headset (listening and talking simultaneously) your device should support HFP or HSP profiles. Most of the bluetooth headphones support both HFP and HSP but Earbuds+ <a href="https://www.samsung.com/us/support/owners/product/galaxy-buds-plus" target="_blank" rel="noopener">only supports HFP</a>.</p>
+<p>On the other hand, PulseAudio <a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Bluetooth/#hsphfp" target="_blank" rel="noopener">only supports HSP</a> out-of-the-box. So I had to use oFono to enable HFP for PulseAudio.</p>
+<h1 id="Solution-AskUbuntu-Answer"><a href="#Solution-AskUbuntu-Answer" class="headerlink" title="Solution (AskUbuntu Answer)"></a>Solution (AskUbuntu Answer)</h1><p>I had the similar problem with Galaxy Earbuds+ and here is how I solved it:</p>
+<p>My earbuds profiles were A2DP, AVRCP and HFP and no support for HSP. Pulseaudio only supports HSP out-of-the-box. That’s why I couldn’t switch to HSP/HFP. In order to make HSP/HFP work, you have to enable HFP on pulseaudio which needs ofono. Here is how I did it on Ubuntu 18.04:</p>
+<ol>
+<li>Install <code>ofono</code>:</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ofono</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Config pulseaudio to use ofono:</li>
+</ol>
+<ul>
+<li>Goto <code>/etc/pulse/default.pa</code> find the line <code>load-module module-bluetooth-discover</code> and change it to <code>load-module module-bluetooth-discover headset=ofono</code>.</li>
+<li>Add the user <code>pulse</code> to group <code>bluetooth</code> to grant the permission: <code>sudo useradd -g bluetooth pulse</code> (probably it’s already correct)</li>
+<li>VERY IMPORTANT: To grant the permission, add this to <code>/etc/dbus-1/system.d/ofono.conf</code> (before <code>&lt;/busconfig&gt;</code>):</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;policy user=&quot;pulse&quot;&gt;</span><br><span class="line">  &lt;allow send_destination=&quot;org.ofono&quot;/&gt;</span><br><span class="line">&lt;/policy&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Provide <code>phonesim</code> to <code>ofono</code>. In order to make ofono work, you have to provide a modem to it! You can install a modem emulator called phonesim (implemented by ofono) to make it work:</li>
+</ol>
+<ul>
+<li>install <code>ofono-phonesim</code> (in some distros it is called <code>phonesim</code>). in Ubuntu 18.04:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ofono-phonesim</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Configure phonesim by adding the following lines to <code>/etc/ofono/phonesim.conf</code>:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[phonesim]</span><br><span class="line">Driver=phonesim</span><br><span class="line">Address=127.0.0.1</span><br><span class="line">Port=12345</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Restart <code>ofono</code>:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart ofono.service</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Start <code>phonesim</code>:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ofono-phonesim -p 12345 /usr/share/phonesim/default.xml</span><br></pre></td></tr></table></figure>
+
+<p>Note that the command can be <code>phonesim</code>. To make sure phonesim is started correctly you can clone the ofono repo and use their test scripts:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp</span><br><span class="line">git clone git://git.kernel.org/pub/scm/network/ofono/ofono.git</span><br><span class="line">cd ofono/test</span><br><span class="line">./list-modems</span><br></pre></td></tr></table></figure>
+<p>You should see the modem in the result. You might have to first enable the modem by executing <code>enable-modem</code> and <code>online-modem</code> scripts in the same directory.</p>
+<p>Once the modem is enabled, you should be able to enable HFP profile.</p>
+<ol start="4">
+<li>autostart phonesim. Since you have executed phonesim manually, after every restart you should execute it again. Instead you can install <code>ofono-phonesim-autostart</code> which will start the phonesim as a service.</li>
+</ol>
+<p>References:</p>
+<ul>
+<li><a href="https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Bluetooth/" target="_blank" rel="noopener">https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/Bluetooth/</a></li>
+<li><a href="https://stackoverflow.com/a/51697709/692422" target="_blank" rel="noopener">https://stackoverflow.com/a/51697709/692422</a></li>
+<li><a href="https://docs.plasma-mobile.org/Ofono.html" target="_blank" rel="noopener">https://docs.plasma-mobile.org/Ofono.html</a></li>
+</ul>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Problem"><span class="toc-number">1.</span> <span class="toc-text">The Problem</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Background"><span class="toc-number">2.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Solution-AskUbuntu-Answer"><span class="toc-number">3.</span> <span class="toc-text">Solution (AskUbuntu Answer)</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/" target="_blank" rel="noopener"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&text=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&is_video=false&description=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu&body=Check out this article: http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&title=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu" target="_blank" rel="noopener"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://alisabzevari.github.io/2020/05/17/2020-05-17-galaxy-earbuds-ubuntu/&name=How I fixed my Galaxy Earbuds+ microphone issue on Ubuntu&description=" target="_blank" rel="noopener"><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 Ali Sabzevari
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/alisabzevari" target="_blank" rel="noopener">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-107280259-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'alisabzevari';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
